@@ -52,17 +52,17 @@ let score = 15;
 
 **Arithmetic Operators**
 
-- - - - / %
+- `+ - / % *`
 
 **Comparison Operators**
 
-- == ===
-- != !==
-- > < >= <=
+- `== ===`
+- `!= !==`
+- `> < >= <=`
 
 **Logical Operators**
 
-- && || !
+- `&& || !`
 
 ### 4. Conditions
 
