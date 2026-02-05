@@ -77,15 +77,7 @@ p {
 
 ### Basic Selectors
 
-```mermaid
-graph TD
-    A[CSS Selectors] --> B[Element Selector: p]
-    A --> C[Class Selector: .highlight]
-    A --> D[ID Selector: #header]
-    B --> E[Targets all paragraphs]
-    C --> F[Targets class='highlight']
-    D --> G[Targets id='header']
-```
+
 
 #### 1. **Element Selector** - Style all elements of a type
 ```css
@@ -171,13 +163,7 @@ input:focus {
 
 ### Every Element is a Box
 
-```mermaid
-graph TB
-    A[Element Box] --> B[Margin - Outside Space]
-    B --> C[Border - Box Outline]
-    C --> D[Padding - Inside Space]
-    D --> E[Content - Text/Images]
-```
+
 
 ```css
 .box-example {
@@ -373,14 +359,7 @@ body {
 
 ### Understanding Flexbox
 
-```mermaid
-graph LR
-    A[Flex Container] --> B[Flex Item 1]
-    A --> C[Flex Item 2]
-    A --> D[Flex Item 3]
-    A --> E[Main Axis ↔]
-    A --> F[Cross Axis ↕]
-```
+
 
 Flexbox makes it easy to:
 - Center content horizontally and vertically
@@ -763,7 +742,7 @@ Congratulations! You've learned:
 
 **🚀 Ready to see it all come together? Let's explore our complete project!**
 
-**👉 [Back to Main Workshop →](./README.md)**
+
 
 ---
 
