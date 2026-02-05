@@ -19,16 +19,7 @@ By the end of this section, you'll understand:
 
 ### Think of HTML Like Building a House
 
-```mermaid
-graph TD
-    A[🏠 HTML Document] --> B[🚪 Head - Information]
-    A --> C[🏠 Body - Content]
-    C --> D[🔳 Header]
-    C --> E[🔳 Main Content]
-    C --> F[🔳 Footer]
-    E --> G[📝 Sections]
-    E --> H[📄 Articles]
-```
+
 
 | House Part | HTML Equivalent | Purpose |
 |------------|-----------------|---------|
@@ -66,16 +57,7 @@ Every HTML document follows this pattern:
 
 ### Breaking Down Each Part
 
-```mermaid
-graph TB
-    A[DOCTYPE html] --> B[html lang='en']
-    B --> C[head - Page Information]
-    B --> D[body - Visible Content]
-    C --> E[meta charset]
-    C --> F[title]
-    C --> G[link to CSS]
-    D --> H[h1, p, div, etc.]
-```
+
 
 #### 1. **Document Declaration** (`<!DOCTYPE html>`)
 ```html
