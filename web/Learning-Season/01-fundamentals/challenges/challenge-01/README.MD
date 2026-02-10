@@ -93,7 +93,7 @@ By completing this project, you will:
 
 ## ✅ Submission Guidelines
 
-All contributions to this project should follow the **standard workflow** described in our [`CONTRIBUTING.md`](./CONTRIBUTING.md) file. Please make sure to read it carefully before starting your work. It contains all the necessary steps for creating a pull request, committing your changes, and ensuring your code meets the repository standards. Following these guidelines will help you maintain a professional workflow, make your contributions review-ready, and streamline the process of submitting your completed Task Manager App.
+All contributions to this project should follow the **standard workflow** described in our [`CONTRIBUTING.md`](../../../CONTRIBUTING.md) file. Please make sure to read it carefully before starting your work. It contains all the necessary steps for creating a pull request, committing your changes, and ensuring your code meets the repository standards. Following these guidelines will help you maintain a professional workflow, make your contributions review-ready, and streamline the process of submitting your completed Task Manager App.
 
 ---
 
