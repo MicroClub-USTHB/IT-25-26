@@ -6,22 +6,18 @@ Welcome to the challenges section! Here you'll find all the exercises and challe
 
 ## 1. Fundamentals
 
-| Topic       | Challenge                     | Link                                                       |
-| ----------- | ----------------------------- | ---------------------------------------------------------- |
-| HTML Basics | Build a Personal Profile Page | [Challenge Link](fundamentals/challenges/html-profile.md)  |
-| CSS Basics  | Style Your Profile Page       | [Challenge Link](fundamentals/challenges/css-profile.md)   |
-| JS Basics   | Create a Simple Calculator    | [Challenge Link](fundamentals/challenges/js-calculator.md) |
+| Topic        | Challenge                           | Link                                                                |
+| ------------ | ----------------------------------- | ------------------------------------------------------------------- |
+| Fundamentals | Advanced Task Manager App Challenge | [Challenge Link](01-fundamentals/challenges/challenge-01/README.MD) |
 
 ---
 
 ## 2. Frontend
 
-<!-- ---
+---
 
 ## 3. Backend
 
-
-
 ---
 
-## 4. Discovery -->
+## 4. Discovery
