@@ -6,23 +6,30 @@ Here you can find all the sessions with their descriptions, materials, and video
 
 ## 1. Fundamentals
 
-| Session      | Description                      | Materials                                     | Video                                  |
-| ------------ | -------------------------------- | --------------------------------------------- | -------------------------------------- |
-| HTML Basics  | Learn the structure of a webpage | [Session Link](fundamentals/sessions/html.md) |                                        |
-| CSS Basics   | Style your webpage using CSS     | [Session Link](fundamentals/sessions/css.md)  |                                        |
-| JS Basics    | Introduction to JavaScript       | [Session Link](fundamentals/sessions/js.md)   | [Video](https://youtube.com/yourvideo) |
-| JS in Action | JavaScript in Action & DOM Power | [Session Link](fundamentals/sessions/js.md)   | [Video](https://youtube.com/yourvideo) |
+| Session      | Description                      | Materials                                                                              | Video                                                |
+| ------------ | -------------------------------- | -------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| HTML Basics  | Learn the structure of a webpage | [Session Link](01-fundamentals/sessions/html&css/html.md)                              |                                                      |
+| CSS Basics   | Style your webpage using CSS     | [Session Link](fundamentals/sessions/html&css/css.md)                                  |                                                      |
+| JS Basics    | Introduction to JavaScript       | [Session Link](fundamentals/sessions/javascript/01-javascripts-fundamentals/README.md) | [Video](https://www.youtube.com/watch?v=k-J_z7-hpy8) |
+| JS in Action | JavaScript in Action & DOM Power | [Session Link](fundamentals/sessions/javascript/02-interactive-javascripts)            | [Video](https://www.youtube.com/watch?v=4sSTNSDMmzE) |
 
 ---
 
 ## 2. Frontend
 
+| Session | Description | Materials | Video |
+| ------- | ----------- | --------- | ----- |
+
 ---
 
-<!-- ## 3. Backend
+## 3. Backend
 
+| Session | Description | Materials | Video |
+| ------- | ----------- | --------- | ----- |
 
+---
 
+## 4. Discovery
 
-
-## 4. Discovery -->
+| Session | Description | Materials | Video |
+| ------- | ----------- | --------- | ----- |
