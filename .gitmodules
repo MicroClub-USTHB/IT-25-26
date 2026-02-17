@@ -49,3 +49,6 @@
 [submodule "build-it/2-OptiGami"]
 	path = build-it/2-OptiGami
 	url = https://github.com/Vixen-77/RAG-implementation/
+[submodule "mobile/The-Dart-Language-1st-session"]
+	path = mobile/The-Dart-Language-1st-session
+	url = https://github.com/01amine/Dart-Workshop.git
