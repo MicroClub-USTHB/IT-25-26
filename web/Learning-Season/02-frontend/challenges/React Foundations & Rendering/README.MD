@@ -88,6 +88,7 @@ use Cases:
 
 ## 🧱 Suggested Folder Structure (optional)
 
+```bash
 src/
 ├── components/
 │ ├── Navbar.jsx
@@ -100,6 +101,7 @@ src/
 │ ├── products.js
 │
 ├── App.jsx
+```
 
 ## 🧪 Bonus Challenges (Optional)
 
