@@ -1,18 +1,18 @@
 {
-  "name": "solution",
+  "name": "weather-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "A CLI tool to fetch weather data from OpenWeather API",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js",
     "start": "node index.js",
+    "dev": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["weather", "cli", "openweather", "api"],
   "author": "",
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "express": "^5.2.1"
+    "dotenv": "^17.3.1"
   }
 }
