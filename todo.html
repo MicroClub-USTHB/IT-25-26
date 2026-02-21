@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Task Manager web site</title>
+  </head>
+  <div>
+  <button id="theme-switch">
+    <img src="img/dark_mode_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" >
+    <img src="img/light_mode_24dp_E8EAED_FILL1_wght400_GRAD0_opsz24.svg" >
+  </button>
+  </div>
+  <body>
+    <div id="main-panel">
+      
+      <div id="header">
+        <h1>Task Manager</h1>
+        <div class="line"></div>
+      </div>
+      <div id="control">
+        <div class="input">
+          
+          <input
+            type="text"
+            placeholder="Todo name"
+            id="todoElement2"
+            class="placeholder"
+          />
+          <select id="category">
+            <option value="no-category">no category</option>
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="Study">Study</option>
+            <option value="Tech">Tech</option>
+            <option value="Shopping">Shopping</option>
+          </select>
+
+          <button class="add-button">Add</button>
+        </div>
+        <div class="filter">
+          <div>
+          <button class="filter-btn" id="all">All</button>
+</div>
+<div>
+          <button class="Pending-btn" id="Pending">Pending</button>
+</div>
+<div>
+          <button class="Completed-btn" id="Completed">Completed</button>
+        </div></div>
+        <div class="line"></div>
+      </div>
+      <div id="tasks">
+        <div class="task"></div>
+      </div>
+      <div id="progress">
+        <p class="prog">Progress:</p>
+        <div id="background">
+          <div id="on-top"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>
