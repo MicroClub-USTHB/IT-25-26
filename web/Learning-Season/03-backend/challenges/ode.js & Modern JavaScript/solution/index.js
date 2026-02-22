@@ -4,18 +4,13 @@ const prompt = require('prompt-sync')({ sigint: true }); // package for getting 
 
 
 const API_KEY = process.env.API_KEY // api_key
-let city_name;
+let city_name; // initial declare
 do {
   city_name = prompt("enter a city name to get its weather status: ");
 
   if (!city_name) {
     console.log("city name cannot be empty. Try again");
-  } else if (/\d/.test(city_name)) // wch had syntax asahbi, hbit nchecki berk bli not a number
-  {
-    console.log("city name cannot contain numbers. Try again");
-
-  }
-}while (!city_name || /\d/.test(city_name)); // while empty or includes number
+}}while (!city_name) // while empty
 
 
 //fetching data
