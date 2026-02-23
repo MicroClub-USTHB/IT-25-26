@@ -53,8 +53,7 @@ async function getWeather() {
         }
         console.log(weather_status)
     }catch (error){
-            console.error("Something went wrong: ", error.message)
-        
+            console.error("Something went wrong: ", error.message)   
     }
 }
 
