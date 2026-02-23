@@ -1,0 +1,257 @@
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 26px 14px 46px;
+  color: #112138;
+}
+
+.header {
+  margin-bottom: 14px;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid #c7d7e9;
+  background:
+    linear-gradient(140deg, rgba(255, 255, 255, 0.98), rgba(236, 249, 251, 0.96));
+  box-shadow: 0 10px 24px rgba(15, 57, 97, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 160, 170, 0.22), transparent 64%);
+}
+
+.header-kicker {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.74rem;
+  color: #0e6e79;
+  font-weight: 700;
+}
+
+.header h1 {
+  margin: 0 0 7px;
+  font-size: clamp(1.35rem, 2.7vw, 1.9rem);
+  line-height: 1.2;
+}
+
+.header p {
+  margin: 0;
+  color: #425a74;
+  max-width: 74ch;
+}
+
+.example-card {
+  margin-top: 16px;
+  border: 1px solid #c8d8ea;
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 20px rgba(26, 62, 96, 0.07);
+}
+
+.example-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.example-card h2 {
+  margin: 0;
+  font-size: 1.18rem;
+}
+
+.status-pill {
+  border: 1px solid #9ec9db;
+  border-radius: 999px;
+  background: #e9f8fb;
+  color: #0d5b72;
+  padding: 3px 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.example-note {
+  margin: 9px 0 8px;
+  color: #4f6079;
+  font-size: 0.95rem;
+}
+
+.path-line {
+  margin: 0 0 10px;
+  border: 1px dashed #b5cbe2;
+  border-radius: 10px;
+  padding: 8px 10px;
+  background: #f7fbff;
+  font-size: 0.86rem;
+  color: #355271;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.debug-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.debug-controls input {
+  min-width: 260px;
+  padding: 7px 10px;
+  border: 1px solid #c9d8ea;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.debug-controls button {
+  border: 1px solid #9ec9db;
+  border-radius: 8px;
+  background: #e9f8fb;
+  color: #0d5b72;
+  padding: 7px 11px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.nested-box {
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 11px;
+  background: #fbfdff;
+  border: 1px solid #dde7f2;
+}
+
+.drill-board {
+  border-left: 4px solid #006e7a;
+}
+
+.drill-column {
+  border-left: 4px solid #d47e2a;
+}
+
+.drill-list {
+  border-left: 4px solid #3f8d33;
+}
+
+.node-title {
+  margin: 0;
+  font-size: 0.93rem;
+  font-weight: 700;
+  color: #1e3b5a;
+}
+
+.task-list {
+  list-style: none;
+  margin: 9px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid #dce5f1;
+  border-radius: 10px;
+  padding: 9px;
+  background: #ffffff;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.task-row:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(24, 54, 88, 0.08);
+}
+
+.task-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-label input {
+  accent-color: #0f7f8b;
+  width: 16px;
+  height: 16px;
+}
+
+.task-label span {
+  font-size: 0.95rem;
+}
+
+.delete-btn {
+  border: 1px solid #efb8ac;
+  border-radius: 8px;
+  background: #ffe9e3;
+  color: #8f1f04;
+  padding: 6px 11px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.16s ease, transform 0.16s ease;
+}
+
+.delete-btn:hover {
+  background: #ffd6ca;
+  transform: translateY(-1px);
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.65;
+}
+
+.small-text {
+  margin: 6px 0 0;
+  color: #4f6079;
+  font-size: 0.88rem;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 18px 10px 34px;
+  }
+
+  .example-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .debug-controls input {
+    min-width: 100%;
+  }
+}
+
+.theme-card {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.theme-card.light {
+  background: #ffffff;
+  color: #132238;
+  border: 1px solid #d6e0ef;
+}
+
+.theme-card.dark {
+  background: #162033;
+  color: #f2f6ff;
+  border: 1px solid #304568;
+}
+
