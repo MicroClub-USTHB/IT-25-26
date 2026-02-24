@@ -40,7 +40,7 @@ async function getWeather() {
             throw new Error(`Unexpected error: ${response.status}`)
         }
         const country = data['sys']['country']
-        city_name = data['name'] //updated city_name variable
+        city_name = data.name //ktacheft bli t9der dir . fi plaset ['']
         const weather = data['weather'][0]['main']
         const temp = data['main']['temp']
         const humidity = data['main']['humidity']
