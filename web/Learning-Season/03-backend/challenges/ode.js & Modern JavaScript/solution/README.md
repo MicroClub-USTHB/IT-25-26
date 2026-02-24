@@ -19,7 +19,7 @@ npm install
 
 Create a free account at [openweathermap.org](https://openweathermap.org/api) and grab your API key.
 
-**3. put you api key in `.env` file**
+**3. Create `.env` file and put you api key**
 ```
 API_KEY=your_api_key_here
 ```
