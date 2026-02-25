@@ -1,0 +1,90 @@
+/* === BASE === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* === CONTENEUR PRINCIPAL === */
+.container_product {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap; /* passe en colonne sur petits écrans */
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === CARTE PRODUIT === */
+.product {
+  width: fit-content;
+  max-width: 550px;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* animation au hover */
+}
+
+.product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.13);
+}
+
+/* === IMAGE === */
+img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover; /* recadre proprement si besoin */
+}
+
+/* === INFOS PRODUIT === */
+.container-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* espace régulier entre les éléments */
+  font-size: 0.875rem; /* équivalent à "small" mais plus précis */
+  margin-top: 14px;
+}
+
+/* === BOUTON === */
+button {
+  border: 1px solid transparent;
+  border-radius: 8px; /* 20% sur un bouton donne un résultat bizarre, 8px c'est mieux */
+  background-color: #e8e4e0;
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  background-color: #d4cfc9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0px);
+  box-shadow: none;
+}
+
+.boutton {
+  width: 120px;
+}
