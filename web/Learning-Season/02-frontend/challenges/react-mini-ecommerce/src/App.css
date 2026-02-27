@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+background: linear-gradient(135deg, #F8F8FA, #EDECF5);
+}
+
+.product-card{
+background:white ;
+border-radius: 20px;
+padding: 16px;
+width: 220px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+transition: 0.3s ease;
+ justify-content: center;   
+ align-items: center;       
+ flex-direction: column;   
+ text-align: center;
+display: flex;
+   
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 260px);
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.product-card:hover {
+  transform: translateY(-20px);
+}
+.product-img{
+    height: 180px;
+    width: 150px;
+     object-fit: cover;
+     border-radius: 20px;
+}
+
+.product-title{
+color: #2E2A4D;
+ margin: 12px;
+ text-transform: capitalize;
+ font-size: 1.3rem;
+ font-weight: 600;
+}
+
+.product-price{
+color:#2E2A4D;
+font-size:1.2rem ;
+font-weight: 600;
+ letter-spacing: 1.4px;
+ margin: 10px;
+}
+
+.product-stock{
+color:#836b98 ;
+font-weight: 500;
+margin:10px ;
+}
+
+.add-btn{
+    background:#836b98 ;
+    color: white;
+    border-radius: 20px;
+     border:none;
+     width:90% ;
+    margin-top: 13px; 
+     padding: 10px;
+     font-size: 1.1rem;
+     font-weight: 500;
+ transition: 0.7s ease;
+}
+.add-btn:hover{
+  background:#2E2A4D;
+   transform: scale(1.1);
+}
+
+.cart-count{
+
+  font-size: 1.8rem;  
+  color: #2E2A4D;
+  margin: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cart-section{
+  background:white ;
+   border-radius: 20px;
+   width: 500;
+  padding: 25px; 
+  margin: 30px;
+}
+
+.cart-item{
+    color: #2E2A4D;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+
+}
+.cart-item button{
+    background-color: #836b98;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px ;
+    margin: 0 5px;
+    
+    transition: 0.3s ease;
+}
+.cart-item button:hover{
+    background: #2E2A4D;
+}
+
+.cart-title{
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    color: #2E2A4D;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.cart-total{
+    font-size: 1.3rem;
+    color: #836b98;
+    text-align: right;
+    margin-top: 20px;
+}
+
+.low-stock{
+  color: rgb(226, 37, 37);
+  font-weight: 600;
+  margin: 4px;
+}
+
+.out-stock{
+    color: rgb(226, 37, 37);
+  font-weight: 600;
+  margin: 4px;
+}
