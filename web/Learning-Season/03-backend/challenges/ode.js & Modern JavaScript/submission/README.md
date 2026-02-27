@@ -30,11 +30,9 @@ Create a `.env` file in the project root:
 
 ```env
 OPENWEATHER_API_KEY=your_openweather_api_key
-IPAPI_KEY=your_ipapi_key         # optional, used for auto city detection
 ```
 
 - Get an OpenWeatherMap API key at [openweathermap.org](https://home.openweathermap.org/users/sign_up)
-- Get an ipapi key at [ipapi.com](https://ipapi.com/) (free tier available)
 
 ---
 
@@ -56,16 +54,16 @@ npm start -- [location] [options]
 **Examples:**
 
 ```bash
-# Current weather in London
-npm start -- london
+# Current weather in Algiers
+npm start -- algiers
 
 # 8-hour forecast
-npm start -- london -H 8
+npm start -- blida -H 8
 
 # 5-day forecast with no cache
 npm start -- "new york" -d 5 --no-cache
 
-# Auto-detect city (requires IPAPI_KEY)
+# Auto-detect city
 npm start
 ```
 
