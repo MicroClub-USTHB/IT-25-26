@@ -1,11 +1,11 @@
-import type { IWeatherService } from '../interfaces.js';
+import type { IWeatherProvider } from '../interfaces.js';
 import {
   toCurrentWeatherDto,
   toDailyForecastDto,
   toHourlyForecastDto,
 } from '../utils/mappers.js';
 
-export class OpenWeatherApi implements IWeatherService {
+export class OpenWeatherApi implements IWeatherProvider {
   private apiKey: string;
   private baseUrl: string = 'https://api.openweathermap.org/data/2.5';
 
@@ -18,12 +18,12 @@ export class OpenWeatherApi implements IWeatherService {
     this.apiKey = apiKey;
   }
 
-  reset(): IWeatherService {
+  reset(): IWeatherProvider {
     this._forecast = 'current';
     return this;
   }
 
-  forecast(forecast: 'current' | 'hourly' | 'daily'): IWeatherService {
+  forecast(forecast: 'current' | 'hourly' | 'daily'): IWeatherProvider {
     this._forecast = forecast;
     return this;
   }

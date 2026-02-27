@@ -1,5 +1,9 @@
 import 'dotenv/config';
-import type { ICacheService, IWeatherService } from '../interfaces.js';
+import type {
+  ICacheService,
+  IWeatherProvider,
+  IWeatherService,
+} from '../interfaces.js';
 import type { WeatherDto } from '../types.js';
 import { detectCity } from '../utils/helpers.js';
 
@@ -8,7 +12,7 @@ export class WeatherService implements IWeatherService {
   private _noCache: boolean = false;
 
   constructor(
-    protected readonly weatherProvider: IWeatherService,
+    protected readonly weatherProvider: IWeatherProvider,
     protected readonly cacheProvider: ICacheService,
   ) {}
 
@@ -33,8 +37,7 @@ export class WeatherService implements IWeatherService {
       const cached = await this.cacheProvider.get(
         `${this._forecast}:${location}`,
       );
-      console.log('cache:', cached ? 'HIT' : 'MISS');
-      if (cached) return cached as WeatherDto;
+      if (cached) return cached.value as WeatherDto;
     }
 
     this.weatherProvider.forecast(this._forecast);

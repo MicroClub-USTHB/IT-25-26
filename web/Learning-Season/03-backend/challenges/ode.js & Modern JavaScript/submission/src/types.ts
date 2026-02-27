@@ -1,6 +1,16 @@
 // ------------------------------
 // Shared Types
 // ------------------------------
+export interface CacheStats {
+  hits: number;
+  misses: number;
+  keys: number;
+}
+
+export interface CacheEntry {
+  expiresAt: number;
+  value: any;
+}
 
 export interface CoordinatesDto {
   lat: number;

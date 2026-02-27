@@ -1,13 +1,15 @@
 import { CliService } from './core/cli.js';
 import { WeatherService } from './core/weather.js';
+import type { ICacheService } from './interfaces.js';
 import { LocalCacheProvider } from './providers/cache/local-cache.js';
 import { OpenWeatherApi } from './providers/openweather.js';
 
 const args = process.argv.slice(2);
 
+let cacheProvider: ICacheService;
+
 function initCli() {
   const isInteractive = args.includes('-i') || args.includes('--interactive');
-  let cacheProvider;
 
   if (isInteractive) {
     cacheProvider = new LocalCacheProvider();
@@ -19,7 +21,7 @@ function initCli() {
   const weatherProvider = new OpenWeatherApi(process.env.OPENWEATHER_API_KEY!);
   const weatherClient = new WeatherService(weatherProvider, cacheProvider);
 
-  const cliClient = new CliService(weatherClient);
+  const cliClient = new CliService(weatherClient, cacheProvider);
 
   if (!isInteractive) {
     return cliClient.inline();
@@ -36,6 +38,10 @@ async function start() {
     const message = error instanceof Error ? error.message : String(error);
     console.error('Error fetching weather data:', message);
     process.exitCode = 1;
+  } finally {
+    if (cacheProvider.clearTimers) {
+      cacheProvider.clearTimers();
+    }
   }
 }
 
