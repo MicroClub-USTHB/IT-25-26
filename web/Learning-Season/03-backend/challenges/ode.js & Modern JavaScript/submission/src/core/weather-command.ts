@@ -1,5 +1,4 @@
 import { Command } from 'commander';
-import { WeatherService } from './weather.js';
 import {
   printCurrentWeather,
   printDailyForecast,
@@ -10,8 +9,12 @@ import type {
   DailyForecastDto,
   HourlyForecastDto,
 } from '../types.js';
+import type { ICacheService, IWeatherService } from '../interfaces.js';
 
-export function buildWeatherCommand(weatherClient: WeatherService): Command {
+export function buildWeatherCommand(
+  weatherClient: IWeatherService,
+  cacheProvider: ICacheService,
+): Command {
   const program = new Command();
 
   program
@@ -19,8 +22,9 @@ export function buildWeatherCommand(weatherClient: WeatherService): Command {
     .option('-H, --hourly [hours]', 'Show hourly forecast')
     .option('-d, --daily [days]', 'Show daily forecast')
     .option('--no-cache', 'Disable cache')
+    .option('--show-cache', 'Show cache state after fetching data')
     .action(async (location, options) => {
-      const { hourly, daily, cache } = options;
+      const { hourly, daily, cache, showCache } = options;
       const forecastFlags = ['hourly', 'daily'].filter((key) => options[key]);
       if (forecastFlags.length > 1) {
         console.error(
@@ -54,7 +58,10 @@ export function buildWeatherCommand(weatherClient: WeatherService): Command {
           printHourlyForecast(data as HourlyForecastDto, count);
           break;
       }
-    });
 
+      if (showCache) {
+        cacheProvider.dump();
+      }
+    });
   return program;
 }

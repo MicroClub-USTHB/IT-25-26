@@ -1,10 +1,16 @@
-import type { ICliService } from '../interfaces.js';
+import type {
+  ICacheService,
+  ICliService,
+  IWeatherService,
+} from '../interfaces.js';
 import { buildWeatherCommand } from './weather-command.js';
-import type { WeatherService } from './weather.js';
 import repl from 'node:repl';
 
 export class CliService implements ICliService {
-  constructor(private weatherClient: WeatherService) {}
+  constructor(
+    private weatherClient: IWeatherService,
+    private cacheProvider: ICacheService,
+  ) {}
   private _inline: boolean = false;
 
   inline() {
@@ -21,7 +27,7 @@ export class CliService implements ICliService {
   }
 
   private async runInline(args?: string[]): Promise<void> {
-    const program = buildWeatherCommand(this.weatherClient);
+    const program = buildWeatherCommand(this.weatherClient, this.cacheProvider);
     program.name('weather').description('Weather CLI tool').version('1.0.0');
     if (args) {
       await program.parseAsync(args, { from: 'user' });
@@ -60,6 +66,9 @@ export class CliService implements ICliService {
                 '  -d, --daily [n]    Show daily forecast (default: 7 days)',
               );
               console.log('  --no-cache         Disable cache');
+              console.log(
+                '  --show-cache      Show cache state after fetching data',
+              );
               console.log('\nCommands: weather, help, exit\n');
               break;
 
@@ -74,6 +83,12 @@ export class CliService implements ICliService {
                   error instanceof Error ? error.message : String(error);
                 console.error(`❌ ${message}`);
               }
+              break;
+            }
+
+            case 'clear': {
+              // clear terminal
+              process.stdout.write('\x1Bc');
               break;
             }
 
