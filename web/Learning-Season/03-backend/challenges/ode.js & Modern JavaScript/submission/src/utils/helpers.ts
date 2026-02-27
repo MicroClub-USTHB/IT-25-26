@@ -1,12 +1,23 @@
-const IPAPI_KEY = process.env.IPAPI_KEY;
+async function getIpAddress() {
+  const res = await fetch('https://api.ipify.org');
+  if (!res.ok) {
+    throw new Error(`Failed to get IP address: ${res.statusText}`);
+  }
+  return (await res.text()).trim();
+}
 
 export async function detectCity() {
-  const res = await fetch(
-    `https://api.ipapi.com/api/check/?access_key=${IPAPI_KEY}`,
-  );
+  const ip = await getIpAddress();
+  const res = await fetch(`http://ip-api.com/json/${ip}`);
   const data = (await res.json()) as any;
 
-  if (!res.ok || !data || !data.city) {
+  if (!res.ok) {
+    throw new Error(
+      `Failed to detect location: ${data.error?.message || res.statusText}`,
+    );
+  }
+
+  if (!data || !data.city) {
     throw new Error('Unable to detect location');
   }
 
