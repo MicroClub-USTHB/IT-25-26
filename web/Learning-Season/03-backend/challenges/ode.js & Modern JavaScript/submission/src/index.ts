@@ -36,11 +36,11 @@ async function start() {
     await cliClient.run();
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
-    console.error('Error fetching weather data:', message);
+    console.error('Error:', message);
     process.exitCode = 1;
   } finally {
     if (cacheProvider.clearTimers) {
-      cacheProvider.clearTimers();
+      cacheProvider.clearTimers(); // Clear any pending cache expiration timers
     }
   }
 }

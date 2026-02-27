@@ -28,7 +28,14 @@ export class CliService implements ICliService {
 
   private async runInline(args?: string[]): Promise<void> {
     const program = buildWeatherCommand(this.weatherClient, this.cacheProvider);
-    program.name('weather').description('Weather CLI tool').version('1.0.0');
+    program
+      .name('weather')
+      .description('Weather CLI tool')
+      .version('1.0.0')
+      .exitOverride() // prevent commander from exiting the process on error
+      .configureOutput({
+        writeErr: () => {},
+      });
     if (args) {
       await program.parseAsync(args, { from: 'user' });
     } else {
