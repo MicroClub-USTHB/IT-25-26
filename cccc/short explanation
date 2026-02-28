@@ -1,0 +1,42 @@
+**`src/data/products.js`**
+Just a plain array of 5 product objects. Every component that needs product info imports from here — single source of truth, you only edit one place to change prices, stock, names or images.
+
+---
+
+**`src/App.jsx`**
+The brain of the app. Holds all the state (`cart`, `wishlist`, `dark mode`, `search`, `sort`, `selected category`) using `useState`. Passes data and functions down to child components as props. All cart and wishlist logic lives here so every component stays in sync.
+
+---
+
+**`src/components/Navbar.jsx`**
+Purely visual — receives `cartCount` and `wishCount` as props and displays the badges. Calls `onCartOpen` and `onWishOpen` when the icons are clicked, which triggers the panels in `App.jsx`.
+
+---
+
+**`src/components/Sidebar.jsx`**
+Handles category selection and dark mode toggle. Has its own small local state just for opening/closing the Face Care dropdown. Everything else it receives as props from `App.jsx`.
+
+---
+
+**`src/components/ProductCard.jsx`**
+Displays one product. Wrapped in `memo` so it only re-renders if its own props change. Reads `stock` to decide whether to show Low Stock badge, Out of Stock badge, or disable the button.
+
+---
+
+**`src/components/CartItem.jsx`**
+Displays one item inside the cart panel. Has + / − buttons that call `onInc` and `onDec` from `App.jsx`. The + button is disabled when `qty >= stock` to prevent exceeding available stock.
+
+---
+
+**`src/components/Cart.jsx`**
+The sliding cart panel. Maps over the `cart` array and renders a `CartItem` for each. Calculates and displays the total price. Shows an empty state when cart is empty.
+
+---
+
+**`src/components/Wishlist.jsx`**
+Same structure as Cart but simpler — no quantity controls. Filters `products` by the `wishlist` Set to know which items to show.
+
+---
+
+**`src/index.css`**
+All styles in one file using CSS variables (`--tan`, `--cream`, etc.). Dark mode works by toggling the `dark` class on `<body>` which overrides all variables at once — no duplicate styles needed.
