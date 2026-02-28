@@ -1,26 +1,16 @@
-# MicroClub IT Section 2025-2026
+# React + Vite
 
-Welcome to the official repository of the **IT Section** at [MicroClub](https://microclub.info/) - the first scientific club in Algeria, founded in 1985 at USTHB.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## About
+Currently, two official plugins are available:
 
-This repository showcases all activities, events, workshops, and challenges organized by the IT section during the 2025-2026 academic year.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Sub-Sections
+## React Compiler
 
-The IT section is divided into four specialized sub-sections:
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- **AI** - Artificial Intelligence and Machine Learning
-- **Mobile** - Mobile Application Development
-- **Web** - Web Development and Technologies
-- **Security** - Cybersecurity and Network Security
+## Expanding the ESLint configuration
 
-## What You'll Find Here
-
-- Workshop materials and resources
-- Event documentation
-- Challenge problems and solutions
-- Training content
-- Project showcases
-
-_Learning IT, Experiencing IT, Sharing IT._
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
