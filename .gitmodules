@@ -55,3 +55,6 @@
 [submodule "Flutter-Foundations-"]
 	path = Flutter-Foundations-
 	url = https://github.com/01amine/flutter-workshop.git
+[submodule "mobile/Flutter-Foundations-UI-Logic"]
+	path = mobile/Flutter-Foundations-UI-Logic
+	url = https://github.com/01amine/flutter-workshop.git
