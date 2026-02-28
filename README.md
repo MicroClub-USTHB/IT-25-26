@@ -1,26 +1,13 @@
-# MicroClub IT Section 2025-2026
+# This is my solution to the Front-End track 1st Challenge.
 
-Welcome to the official repository of the **IT Section** at [MicroClub](https://microclub.info/) - the first scientific club in Algeria, founded in 1985 at USTHB.
+Features implemented : 
 
-## About
+- Dynamic rendering of products
+- Stock renders depending on how much it is available
+- Adding and removing products to Cart
 
-This repository showcases all activities, events, workshops, and challenges organized by the IT section during the 2025-2026 academic year.
+Features to be implemented in the future : 
 
-## Sub-Sections
-
-The IT section is divided into four specialized sub-sections:
-
-- **AI** - Artificial Intelligence and Machine Learning
-- **Mobile** - Mobile Application Development
-- **Web** - Web Development and Technologies
-- **Security** - Cybersecurity and Network Security
-
-## What You'll Find Here
-
-- Workshop materials and resources
-- Event documentation
-- Challenge problems and solutions
-- Training content
-- Project showcases
-
-_Learning IT, Experiencing IT, Sharing IT._
+- Increasing and decreasing cart item quantity (making sure to delete the item from the cart when the quantity <= 0)
+- Cart items total price 
+- Better UI design
