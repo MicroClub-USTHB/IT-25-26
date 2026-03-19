@@ -1,0 +1,63 @@
+/* ── GOOGLE FONTS ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Outfit:wght@300;400;500&display=swap');
+
+/* ── RESET ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── TOKENS ── */
+:root {
+  --bg:        #F6F3EE;
+  --surface:   #FFFFFF;
+  --border:    #E4DED5;
+  --border-md: #C8C0B4;
+
+  --ink:       #1A1714;
+  --ink-2:     #6A6460;
+  --ink-3:     #A09890;
+
+  --accent:    #BF5E2A;
+  --accent-lt: #F5E8DF;
+  --accent-dk: #9A4A1F;
+
+  --warn-bg:   #FDF4DC;
+  --warn-tx:   #8A5B00;
+  --err-bg:    #FDEAEA;
+  --err-tx:    #962020;
+  --ok-bg:     #E4F5EC;
+  --ok-tx:     #1A6B42;
+
+  --shadow-sm: 0 1px 3px rgba(26,23,20,.07);
+  --shadow-md: 0 4px 18px rgba(26,23,20,.11);
+
+  --r:    12px;
+  --r-sm: 8px;
+  --r-xs: 6px;
+}
+
+html { font-size: 16px; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+}
+
+input, select {
+  font-family: 'Outfit', sans-serif;
+}
