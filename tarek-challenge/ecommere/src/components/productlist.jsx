@@ -13,6 +13,12 @@ export function ProducList({ onAddToCart,search, sort }) {
     let filtered = array.filter(product =>
     product.title.toLowerCase().includes(search.toLowerCase())
   )
+  if (sort === "asc") {
+    filtered = filtered.sort((a, b) => a.price - b.price)
+  }
+  if (sort === "desc") {
+    filtered = filtered.sort((a, b) => b.price - a.price)
+  }
 
   return (
     <div className="product-list">
