@@ -1,9 +1,9 @@
 import "./cart.css";
-import { CartIteam} from "./cartiteam";
+import { CartItem} from "./cartiteam";
 export function Cart({ cart, onIncrease, onDecrease, onRemove }) {
   return <>
   {cart.map(item => (
-        <CartIteam
+        < CartItem
           key={item.id}
           id={item.id}
           title={item.title}
