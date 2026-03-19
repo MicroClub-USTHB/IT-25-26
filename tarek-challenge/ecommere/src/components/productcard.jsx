@@ -1,18 +1,18 @@
 import "./product.css";
-
-
-export function ProducCard ({ title, price, image, stock, id }){
+export function ProducCard ({ title, price, image, stock, id, onAddToCart }){
   return(
     <>
-    <img src={image} alt={title} />
+    <div className="product-iteam">
+        <img src={image} alt={title} />
       <p>{title}</p>
       <p>{price}</p> 
       <p>{stock}</p>   
       <button 
       disabled={stock === 0}
-      onClick={addingCart}
-      >{stock>=0? "Add to stock":"Out of stock"}
+      onClick={() => onAddToCart(id)}
+      >{stock === 0 ? "Out of stock" : "Add to cart"}
       </button>
+    </div>
     </>
   );
 }

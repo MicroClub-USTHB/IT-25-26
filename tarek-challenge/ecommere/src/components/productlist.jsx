@@ -1,6 +1,5 @@
 import "./product.css";
 import { ProducCard } from "./productcard";
-export function ProducList() {
   const array = [
     {
        id: crypto.randomUUID(),
@@ -38,6 +37,8 @@ export function ProducList() {
       stock: "4",
     },
   ];
+export function ProducList({onAddToCart}) {
+
 
   return (
     <>
@@ -50,6 +51,7 @@ export function ProducList() {
             id={product.id}
             image={product.image}
             stock={product.stock}
+             onAddToCart={onAddToCart}
           />
         );
       })}
