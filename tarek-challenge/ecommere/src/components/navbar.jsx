@@ -14,34 +14,28 @@ export function Navbar({ cartCount, search, onSearch, sort, onSort }) {
         </div>
         <span>Droplify</span>
       </div>
-
       <div className="navbar-search">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <circle cx="6" cy="6" r="4.5" stroke="currentColor" strokeWidth="1.5"/>
           <line x1="9.8" y1="9.8" x2="13" y2="13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
         </svg>
-        <input 
-        type="text"
-        placeholder="Search products…"
-        value={search}
-        onChange={(e) => onSearch(e.target.value)}  />
+        <input
+          type="text"
+          placeholder="Search products…"
+          value={search}
+          onChange={(e) => onSearch(e.target.value)}
+        />
       </div>
-
       <div className="navbar-actions">
-         <select
-        value={sort}
-        onChange={(e) => onSort(e.target.value)}    
-      >
-        <option value="">Sort by price</option>
-        <option value="asc">Price: Low → High</option>
-        <option value="desc">Price: High → Low</option>
-      </select>
-     
-
+        <select value={sort} onChange={(e) => onSort(e.target.value)}>
+          <option value="">Sort by price</option>
+          <option value="asc">Price: Low → High</option>
+          <option value="desc">Price: High → Low</option>
+        </select>
         <button className="navbar-cart-btn">
           <svg width="17" height="17" viewBox="0 0 18 18" fill="none">
             <path d="M2 2h2l2.4 9h8l1.6-6H6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            <circle cx="8"  cy="15.5" r="1.2" fill="currentColor"/>
+            <circle cx="8" cy="15.5" r="1.2" fill="currentColor"/>
             <circle cx="13" cy="15.5" r="1.2" fill="currentColor"/>
           </svg>
           Cart
