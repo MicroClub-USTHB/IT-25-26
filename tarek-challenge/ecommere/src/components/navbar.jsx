@@ -1,6 +1,6 @@
 import "./navbar.css";
 
-export function Navbar({ cartCount }) {
+export function Navbar({ cartCount, search, onSearch, sort, onSort }) {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
@@ -24,11 +24,15 @@ export function Navbar({ cartCount }) {
       </div>
 
       <div className="navbar-actions">
-        <select className="navbar-sort">
-          <option value="">Sort by price</option>
-          <option value="asc">Price: Low → High</option>
-          <option value="desc">Price: High → Low</option>
-        </select>
+         <select
+        value={sort}
+        onChange={(e) => onSort(e.target.value)}    
+      >
+        <option value="">Sort by price</option>
+        <option value="asc">Price: Low → High</option>
+        <option value="desc">Price: High → Low</option>
+      </select>
+     
 
         <button className="navbar-cart-btn">
           <svg width="17" height="17" viewBox="0 0 18 18" fill="none">
