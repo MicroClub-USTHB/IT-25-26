@@ -9,10 +9,14 @@ const array = [
   { id: 5, title: "Webcam HD",           price: 89,  image: "", stock: 2  },
 ];
 
-export function ProducList({ onAddToCart }) {
+export function ProducList({ onAddToCart,search, sort }) {
+    let filtered = array.filter(product =>
+    product.title.toLowerCase().includes(search.toLowerCase())
+  )
+
   return (
     <div className="product-list">
-      {array.map((product) => (
+      {filtered.map((product) => (
         <ProducCard
           key={product.id}
           title={product.title}

@@ -63,7 +63,11 @@ function App() {
         onSort={setSort}
       />
       <div className="app-layout">
-        <ProducList onAddToCart={handleAddToCart} />
+        <ProducList 
+          onAddToCart={handleAddToCart}
+           search={search}
+            sort={sort}
+        />
         <Cart
           cart={cart}
           cartTotal={cartTotal}
