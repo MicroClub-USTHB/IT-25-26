@@ -2,11 +2,11 @@ import "./product.css";
 import { ProducCard } from "./productcard";
 
 const array = [
-  { id: 1, title: "Wireless Monitor",    price: 299, image: "", stock: 12 },
-  { id: 2, title: "Phone Stand Pro",     price: 49,  image: "", stock: 3  },
-  { id: 3, title: "Mechanical Keyboard", price: 129, image: "", stock: 0  },
-  { id: 4, title: "USB-C Hub",           price: 79,  image: "", stock: 20 },
-  { id: 5, title: "Webcam HD",           price: 89,  image: "", stock: 2  },
+  { id: 1, title: "Wireless Monitor",    price: 299, image: "/termo.webp", stock: 12 },
+  { id: 2, title: "Phone Stand Pro",     price: 49,  image: "61srjyM7TFL._AC_UF894,1000_QL80_.jpg", stock: 3  },
+  { id: 3, title: "Mechanical Keyboard", price: 129, image: "/download.jpg", stock: 0  },
+  { id: 4, title: "USB-C Hub",           price: 79,  image: "/download (1).jpg", stock: 20 },
+  { id: 5, title: "Webcam HD",           price: 89,  image: "/61-K2lXmHQL.jpg", stock: 2  },
 ];
 
 export function ProducList({ onAddToCart,search = "", sort = "" }) {
