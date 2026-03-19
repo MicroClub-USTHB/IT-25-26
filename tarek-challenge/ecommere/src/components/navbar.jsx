@@ -1,16 +1,16 @@
 import "./navbar.css";
 
-export function Navbar({ title, price, image, stock, id }) {
+export function Navbar({ cartCount }) {
   return (
     <>
-      <p>IT</p>
+      <p>Droplify</p>
       <input type="text" placeholder="search" />
       <select>
-        <option value="price :heigt->low">price :heigt-low</option>
-        <option value="price : low->height ">price : low-height </option>
-        <option value="sortby price">sortby price</option>
+        <option value="">Sort by price</option>
+        <option value="asc">Price: Low → High</option>
+        <option value="desc">Price: High → Low</option>
       </select>
-      <button>cart</button>
+      <button>Cart ({cartCount})</button>
     </>
-  );
+  )
 }

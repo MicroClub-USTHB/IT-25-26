@@ -45,10 +45,10 @@ function App() {
       setCart([...cart, { ...product, qty: 1 }]);
     }
   }
-
+const cartCount = cart.reduce((total, item) => total + item.qty, 0)
   return (
     <>
-      <Navbar />
+      <Navbar cartCount={cartCount} />
       <ProducList onAddToCart={handleAddToCart} />
       <Cart
       cart ={cart}
