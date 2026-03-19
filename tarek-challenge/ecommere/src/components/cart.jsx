@@ -1,15 +1,16 @@
 import "./cart.css";
 import { CartItem } from "./cartiteam";
 
-export function Cart({ cart, cartTotal, onIncrease, onDecrease, onRemove }) {
+export function Cart({ cart, cartTotal, onIncrease, onDecrease, onRemove, onClose }) {
   return (
     <aside className="cart">
 
-      <div className="cart-header">
+        <div className="cart-header">
         <h2 className="cart-title">Your cart</h2>
-        <span className="cart-count">
-          {cart.reduce((t, i) => t + i.qty, 0)} items
-        </span>
+        <div style={{display:'flex', alignItems:'center', gap:'8px'}}>
+          <span className="cart-count">{cart.reduce((t,i) => t + i.qty, 0)} items</span>
+          <button className="cart-close" onClick={onClose}>✕</button>
+        </div>
       </div>
 
       <div className="cart-items">

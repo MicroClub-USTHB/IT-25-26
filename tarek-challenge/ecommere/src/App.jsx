@@ -13,6 +13,7 @@ const products = [
 ];
 
 function App() {
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const [cart, setCart] = useState([]);
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("");
@@ -61,20 +62,20 @@ function App() {
         onSearch={setSearch}
         sort={sort}
         onSort={setSort}
+        onCartOpen={() => setIsCartOpen(true)}
       />
       <div className="app-layout">
-        <ProducList 
-          onAddToCart={handleAddToCart}
-           search={search}
-            sort={sort}
-        />
-        <Cart
-          cart={cart}
-          cartTotal={cartTotal}
-          onIncrease={handleAddToCart}
-          onDecrease={handleDecrease}
-          onRemove={handleRemove}
-        />
+        <ProducList onAddToCart={handleAddToCart} search={search} sort={sort} />
+        {isCartOpen && (
+          <Cart
+            cart={cart}
+            cartTotal={cartTotal}
+            onIncrease={handleAddToCart}
+            onDecrease={handleDecrease}
+            onRemove={handleRemove}
+            onClose={() => setIsCartOpen(false)}
+          />
+        )}
       </div>
     </div>
   );
