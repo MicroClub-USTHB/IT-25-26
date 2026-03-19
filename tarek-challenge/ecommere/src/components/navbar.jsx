@@ -20,7 +20,11 @@ export function Navbar({ cartCount, search, onSearch, sort, onSort }) {
           <circle cx="6" cy="6" r="4.5" stroke="currentColor" strokeWidth="1.5"/>
           <line x1="9.8" y1="9.8" x2="13" y2="13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
         </svg>
-        <input type="text" placeholder="Search products…" />
+        <input 
+        type="text"
+        placeholder="Search products…"
+        value={search}
+        onChange={(e) => onSearch(e.target.value)}  />
       </div>
 
       <div className="navbar-actions">
