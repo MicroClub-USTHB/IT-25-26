@@ -1,4 +1,4 @@
-# Advanced Hooks & Optimization
+# 🪝✨ Advanced Hooks & Optimization
 
 ---
 
@@ -14,7 +14,7 @@ In React, Hooks are just:
 
 ---
 
-### useState
+### 💾 useState
 
 #### ❓ Example Problem
 
@@ -50,7 +50,7 @@ function App() {
 
 ---
 
-### useEffect
+### ⏳ useEffect
 
 #### The Problem
 
@@ -127,7 +127,9 @@ useEffect(() => {
 
 ---
 
-### 🌐 The Problem: Prop Drilling
+### 🌐 useContext
+
+#### The Problem: Prop Drilling
 
 Imagine you have a React app with a deeply nested component tree:
 
@@ -204,7 +206,7 @@ function Level3() {
 
 ---
 
-### useReducer
+### 🎛️ useReducer
 
 #### ⚡ The Problem: Managing Complex State in a Calculator
 
@@ -312,7 +314,9 @@ function reducer(state, action) {
 
 ---
 
-### 🐌 The Problem useMemo Solves
+### 🧠 useMemo
+
+#### 🐌 The Problem useMemo Solves
 
 Imagine you have a React component that does some heavy computation or derives values from props/state every render.
 
@@ -392,7 +396,7 @@ function App() {
 
 ---
 
-### What Are Custom Hooks?
+### 🛠️ What Are Custom Hooks?
 
 A custom hook is basically a JavaScript function whose name starts with use and can call other hooks inside it.
 
