@@ -170,24 +170,6 @@ erDiagram
 
 ### Relationships
 
-erDiagram
-CUSTOMER ||--o{ ORDER : places
-CUSTOMER {
-string name
-string custNumber
-string sector
-}
-ORDER ||--|{ LINE-ITEM : contains
-ORDER {
-int orderNumber
-string deliveryAddress
-}
-LINE-ITEM {
-string productCode
-int quantity
-float pricePerUnit
-}
-
 #### One-to-One
 
 User ↔ Profile
@@ -200,6 +182,7 @@ User → Orders
 
 Products ↔ Categories
 
+```mermaid
 erDiagram
 
     USERS {
@@ -250,6 +233,7 @@ erDiagram
     PRODUCTS ||--o{ ORDER_ITEMS : included_in
     PRODUCTS ||--o{ PRODUCT_CATEGORIES : categorized_as
     CATEGORIES ||--o{ PRODUCT_CATEGORIES : includes
+```
 
 ## ⚙️ How to Design Database + Normalization
 
@@ -257,6 +241,7 @@ erDiagram
 
 ### Bad Design ❌
 
+```mermaid
 erDiagram
 Orders {
 int order_id
@@ -266,8 +251,11 @@ string product_name
 float product_price
 }
 
+```
+
 ### Good Design ✅ – Normalized
 
+```mermaid
 erDiagram
 Users {
 int id
@@ -294,6 +282,7 @@ string email
     Users ||--o{ Orders : places
     Orders ||--o{ Order_Items : contains
     Products ||--o{ Order_Items : included_in
+```
 
 ### Step by step design:
 
