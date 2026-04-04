@@ -1,5 +1,6 @@
 # Databases Essentials
 
+<!--
 1- introduction to database
 1-1- what is database
 1-2- database management system
@@ -12,7 +13,7 @@
 4- who to Design database + Normalization
 5- SQL
 6- Using Databases in Backend (Practical)
-7- what are ORMs & ODMs
+7- what are ORMs & ODMs -->
 
 ---
 
@@ -69,3 +70,218 @@ It handles:
 4. ❌ Data inconsistency, No security, Not scalable...
 
 > Files store data… Databases protect, organize, and optimize data
+
+---
+
+## 🏗️ Types of Databases
+
+### Relational (SQL)
+
+- Structured (tables)
+- Fixed schema
+
+### NoSQL
+
+- Flexible schema
+
+### 💡idea:
+
+- SQL → structure & consistency
+- NoSQL → flexibility & scalability
+
+---
+
+## 📊 Relational Database
+
+### Tables and Schema
+
+Table = like Excel sheet
+Row = one record
+Column = attribute
+
+### Types + Data Integrity & Constraints + Keys
+
+Data Types :
+
+- INT
+- VARCHAR
+- FLOAT
+- DATE
+
+### Constraints (VERY IMPORTANT)
+
+- NOT NULL → must have value
+- UNIQUE → no duplicates
+- DEFAULT → fallback value
+
+### Keys 🔑
+
+- primary kay (id) : Cannot be null + unique
+- Foreign Key 🔗 : Links tables together
+
+💡 Example:
+
+erDiagram
+
+    USERS {
+        INT id PK
+        VARCHAR name
+        VARCHAR email
+        VARCHAR password
+        TIMESTAMP created_at
+    }
+
+    PRODUCTS {
+        INT id PK
+        VARCHAR name
+        TEXT description
+        DECIMAL price
+        INT stock
+        TIMESTAMP created_at
+    }
+
+    CATEGORIES {
+        INT id PK
+        VARCHAR name
+    }
+
+    ORDERS {
+        INT id PK
+        INT user_id
+        DECIMAL total
+        VARCHAR status
+        TIMESTAMP created_at
+    }
+
+    ORDER_ITEMS {
+        INT id PK
+        INT order_id
+        INT product_id
+        INT quantity
+        DECIMAL price
+    }
+
+    PRODUCT_CATEGORIES {
+        INT product_id
+        INT category_id
+    }
+
+### Relationships
+
+#### One-to-One
+
+User ↔ Profile
+
+#### One-to-Many
+
+User → Orders
+
+#### Many-to-Many
+
+Products ↔ Categories
+
+erDiagram
+
+    USERS {
+        INT id PK
+        VARCHAR name
+        VARCHAR email
+        VARCHAR password
+        TIMESTAMP created_at
+    }
+
+    PRODUCTS {
+        INT id PK
+        VARCHAR name
+        TEXT description
+        DECIMAL price
+        INT stock
+        TIMESTAMP created_at
+    }
+
+    CATEGORIES {
+        INT id PK
+        VARCHAR name
+    }
+
+    PRODUCT_CATEGORIES {
+        INT product_id FK
+        INT category_id FK
+    }
+
+    ORDERS {
+        INT id PK
+        INT user_id FK
+        DECIMAL total
+        VARCHAR status
+        TIMESTAMP created_at
+    }
+
+    ORDER_ITEMS {
+        INT id PK
+        INT order_id FK
+        INT product_id FK
+        INT quantity
+        DECIMAL price
+    }
+
+    USERS ||--o{ ORDERS : places
+    ORDERS ||--o{ ORDER_ITEMS : contains
+    PRODUCTS ||--o{ ORDER_ITEMS : included_in
+    PRODUCTS ||--o{ PRODUCT_CATEGORIES : categorized_as
+    CATEGORIES ||--o{ PRODUCT_CATEGORIES : includes
+
+## ⚙️ How to Design Database + Normalization
+
+> Designing a good database = building scalable software
+
+### Bad Design ❌
+
+erDiagram
+Orders {
+int order_id
+string user_name
+string user_email
+string product_name
+float product_price
+}
+
+### Good Design ✅ – Normalized
+
+erDiagram
+Users {
+int id
+string name
+string email
+}
+
+    Products {
+        int id
+        string name
+        float price
+    }
+
+    Orders {
+        int id
+        int user_id
+    }
+
+    Order_Items {
+        int order_id
+        int product_id
+    }
+
+    Users ||--o{ Orders : places
+    Orders ||--o{ Order_Items : contains
+    Products ||--o{ Order_Items : included_in
+
+### Step by step design:
+
+- Identify entities (User, Product…)
+- Define attributes
+- Define relationships
+- Add keys
+
+---
+
+## 🧮 SQL
