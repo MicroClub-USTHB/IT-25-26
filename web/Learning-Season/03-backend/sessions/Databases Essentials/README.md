@@ -121,6 +121,7 @@ Data Types :
 
 💡 Example:
 
+```
 erDiagram
 
     USERS {
@@ -165,6 +166,7 @@ erDiagram
         INT product_id
         INT category_id
     }
+```
 
 ### Relationships
 
