@@ -121,7 +121,7 @@ Data Types :
 
 💡 Example:
 
-```
+```mermaid
 erDiagram
 
     USERS {
