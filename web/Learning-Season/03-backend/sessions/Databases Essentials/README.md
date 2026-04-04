@@ -294,3 +294,71 @@ string email
 ---
 
 ## 🧮 SQL
+
+![SQL](<./images/Types Of SQL Commands.jpg>)
+
+### 🧱 DDL – Data Definition Language
+
+DDL is used to define or modify the database structure: tables, columns, constraints.
+
+#### Create table
+
+```sql
+CREATE TABLE Users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+#### Alter Table (Add Column)
+
+```sql
+ALTER TABLE Users
+ADD COLUMN phone VARCHAR(20);
+```
+
+#### Drop Table
+
+```sql
+DROP TABLE IF EXISTS Users;
+```
+
+### 🧾 DML – Data Manipulation Language
+
+DML is used to work with data inside the tables: insert, update, delete, select.
+
+#### Insert data
+
+```sql
+INSERT INTO Users (name, email)
+VALUES ('mohamed', 'mohamed@example.com');
+```
+
+#### Update data
+
+```sql
+UPDATE Users
+SET name = 'mohamed amine'
+WHERE id = 1;
+```
+
+#### Delete data
+
+```sql
+DELETE FROM Users
+WHERE id = 1;
+```
+
+## 🌐 Using Databases in Backend (Practical)
+
+Flow:
+Client → Backend → Database → Backend → Client
+
+example:
+Get all products
+
+```js
+const products = await db.query("SELECT * FROM products");
+```
