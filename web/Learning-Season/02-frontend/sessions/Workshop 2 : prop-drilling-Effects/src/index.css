@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 6%, rgba(0, 160, 170, 0.16), transparent 42%),
+    radial-gradient(circle at 88% 18%, rgba(240, 134, 72, 0.15), transparent 36%),
+    linear-gradient(135deg, #f7efe2 0%, #ecf7f8 100%);
+  color: #132238;
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}

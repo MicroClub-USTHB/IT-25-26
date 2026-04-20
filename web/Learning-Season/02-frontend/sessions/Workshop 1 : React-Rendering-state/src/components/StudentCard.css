@@ -1,0 +1,247 @@
+/* src/components/StudentCard.css */
+
+/* Main Card */
+.student-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Track-specific borders */
+.student-card.frontend {
+  border-color: #e74c3c;
+}
+
+.student-card.backend {
+  border-color: #2ecc71;
+}
+
+.student-card.fullstack {
+  border-color: #9b59b6;
+}
+
+/* Card Header */
+.student-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.student-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.student-info {
+  flex: 1;
+}
+
+/* Student Name */
+.student-name {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin: 0 0 5px 0;
+  font-weight: 600;
+}
+
+/* Student Details */
+.student-details {
+  margin: 15px 0;
+}
+
+.student-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.student-detail-icon {
+  font-size: 1.2rem;
+  width: 25px;
+  text-align: center;
+}
+
+.student-detail-label {
+  font-weight: 600;
+  min-width: 60px;
+}
+
+.student-detail-value {
+  color: #7f8c8d;
+}
+
+/* Badges Container */
+.badges-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+/* Badge Base */
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: transform 0.2s ease;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+}
+
+/* Age Badges */
+.badge-senior {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.badge-junior {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+/* Track Badge */
+.badge-track {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.badge-track.frontend {
+  background-color: #fee;
+  color: #e74c3c;
+}
+
+.badge-track.backend {
+  background-color: #efe;
+  color: #2ecc71;
+}
+
+.badge-track.fullstack {
+  background-color: #f3e5f5;
+  color: #9b59b6;
+}
+
+/* Verified Badge */
+.badge-verified {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: white;
+}
+
+/* Card Footer */
+.student-card-footer {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 2px solid #ecf0f1;
+  font-size: 0.85rem;
+  color: #95a5a6;
+  text-align: center;
+}
+
+/* Decorative Corner Ribbon (Optional) */
+.student-card.senior::before {
+  content: '⭐';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+}
+
+/* Loading State (Optional) */
+.student-card.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.student-card.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .student-card {
+    padding: 15px;
+  }
+
+  .student-name {
+    font-size: 1.2rem;
+  }
+
+  .student-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .student-detail {
+    font-size: 0.9rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}
