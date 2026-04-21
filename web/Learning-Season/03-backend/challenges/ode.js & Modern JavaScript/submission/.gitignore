@@ -1,0 +1,9 @@
+# Ignore environment variables
+.env
+
+# Ignore dist folder
+dist
+js
+
+# Ignore node_modules
+node_modules
