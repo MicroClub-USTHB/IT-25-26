@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+body{
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  padding-top: 15px;
+  background-color: #000000;
+ 
+}
