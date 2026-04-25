@@ -1,104 +1,16 @@
-# 🌦 Backend Challenge #1 – Weather API CLI App
+# React + Vite
 
-In this challenge, you will build a simple Node.js application that fetches weather data from a public API and displays the result in the console.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-This project will help you practice:
+Currently, two official plugins are available:
 
-- Node.js fundamentals
-- Working with external APIs
-- Async/Await & Promises
-- Error handling
-- Environment variables
-- ES6+ features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 🎯 Learning Objectives
+## React Compiler
 
-By completing this challenge, you should be able to:
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- Initialize a Node.js project using npm
-- Install and use external packages
-- Work with async/await
-- Handle API errors properly
-- Use environment variables securely
-- Structure a small backend application correctly
+## Expanding the ESLint configuration
 
----
-
-## 🛠 Project Requirements
-
-### 1️⃣ Project Setup
-
-You must:
-
-- Initialize project using:
-
-```bash
-npm init -y
-```
-
-- Create:
-
-```bash
-project/
-├── index.js
-├── .env
-├── package.json
-```
-
-### 2️⃣ Weather API Integration
-
-You must:
-
-- Use a public weather API (OpenWeather or similar)
-- Store your API key inside a .env file
-- Fetch weather data for a city
-- Display the result in the console
-
-Example output:
-
-```bash
-City: London
-Temperature: 18°C
-Weather: Clear Sky
-Humidity: 60%
-```
-
-### 3️⃣ Async/Await & Error Handling
-
-You must:
-
-- Use async/await
-- Wrap API call inside try/catch
-- Handle:
-  1. Invalid city name
-  2. Network errors
-  3. Invalid API key
-
-Example:
-
-```js
-try {
-  // fetch weather
-} catch (error) {
-  console.error("Something went wrong:", error.message);
-}
-```
-
----
-
-## 🧠 Technical Constraints
-
-- Do NOT use callbacks
-- Use async/await only
-- Do NOT ignore error handling
-- Keep code clean and readable
-
----
-
-## 🏁 Deliverables
-
-Your submission must include:
-
-- Working API integration
-- Environment variable usage
-- Clean and organized README file
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
