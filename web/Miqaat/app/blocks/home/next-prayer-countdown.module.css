@@ -1,0 +1,109 @@
+.root {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-6);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  background: var(--color-highlight);
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-full);
+  margin: 0 auto var(--space-5) auto;
+  color: var(--color-primary);
+  border: 1px solid var(--color-border-light);
+}
+
+.headerLabel {
+  font-size: var(--text-base);
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  font-weight: 900;
+}
+
+.prayerName {
+  font-family: var(--family-display);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-5);
+}
+
+.countdown {
+  display: flex;
+  flex-direction: row;
+  direction: ltr;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.digits {
+  font-family: var(--family-mono);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  background: var(--color-highlight);
+  border-radius: var(--radius-md);
+  min-width: 4rem;
+  padding: var(--space-2) var(--space-3);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.unitLabel {
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.separator {
+  font-family: var(--family-mono);
+  font-size: var(--text-2xl);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+  font-weight: 700;
+}
+
+.prayerTime {
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  white-space: nowrap;
+}
+
+.prayerTime strong {
+  color: var(--color-primary);
+  font-family: var(--family-mono);
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .digits {
+    font-size: var(--text-2xl);
+    min-width: 3rem;
+  }
+}

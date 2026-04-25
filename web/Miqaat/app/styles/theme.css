@@ -1,0 +1,104 @@
+/* Prayer Times App – Design Tokens */
+
+/* Google Fonts are loaded via root.tsx links */
+
+:root {
+  --family-display: "Cormorant Garamond", "Noto Sans Arabic", Georgia, serif;
+  --family-brand-ar: "Changa", system-ui, sans-serif;
+  --family-body: "DM Sans", "Noto Sans Arabic", system-ui, sans-serif;
+  --family-mono: "Roboto Mono", "Courier New", monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.75rem;
+  --text-4xl: 3.5rem;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+/* ── Light Theme ───────────────────────────────────────────────── */
+:root,
+:root.light-theme {
+  --color-primary: #1a5276;
+  --color-primary-light: #2980b9;
+  --color-primary-dark: #154360;
+  --color-accent: #c9a84c;
+  --color-accent-light: #f4d03f;
+  --color-accent-muted: #f9e4a0;
+
+  --color-bg: #f0f4f8;
+  --color-bg-card: #ffffff;
+  --color-bg-card-alt: #eaf2f8;
+  --color-bg-muted: #dde8f0;
+
+  --color-text: #1a2b3c;
+  --color-text-muted: #455a64;
+  --color-text-inverse: #ffffff;
+  --color-text-accent: #c9a84c;
+
+  --color-border: #cad8e4;
+  --color-border-light: #e0eaf0;
+
+  --color-success: #27ae60;
+  --color-warning: #e67e22;
+  --color-highlight: rgba(26, 82, 118, 0.08);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  --shadow-glow: 0 0 20px rgba(26, 82, 118, 0.25);
+  --shadow-accent-glow: 0 0 16px rgba(201, 168, 76, 0.4);
+}
+
+/* ── Dark Theme ────────────────────────────────────────────────── */
+:root.dark-theme {
+  --color-primary: #2e86c1;
+  --color-primary-light: #5dade2;
+  --color-primary-dark: #1a5276;
+  --color-accent: #f4d03f;
+  --color-accent-light: #f9e4a0;
+  --color-accent-muted: rgba(244, 208, 63, 0.15);
+
+  --color-bg: #0d1b2a;
+  --color-bg-card: #1a2b3c;
+  --color-bg-card-alt: #152232;
+  --color-bg-muted: #0f2030;
+
+  --color-text: #e8f1f8;
+  --color-text-muted: #a0c4d9;
+  --color-text-inverse: #0d1b2a;
+  --color-text-accent: #f4d03f;
+
+  --color-border: #2a4055;
+  --color-border-light: #1e3248;
+
+  --color-success: #2ecc71;
+  --color-warning: #f39c12;
+  --color-highlight: rgba(46, 134, 193, 0.12);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35), 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.25);
+  --shadow-glow: 0 0 20px rgba(46, 134, 193, 0.3);
+  --shadow-accent-glow: 0 0 16px rgba(244, 208, 63, 0.35);
+}
