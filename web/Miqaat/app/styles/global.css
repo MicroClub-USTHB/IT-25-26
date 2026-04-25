@@ -1,0 +1,124 @@
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
+
+/*
+ * ── Tailwind ↔ Design Token Bridge ──────────────────────
+ * Preflight is intentionally excluded — the project already
+ * has its own reset.css.
+ *
+ * Spacing uses @theme (not inline) so --spacing-* variables
+ * are emitted and utilities like gap-5, px-6 work at runtime.
+ *
+ * Colors use @theme inline because theme.css already defines
+ * the --color-* variables — no need to emit duplicates.
+ */
+
+/* Spacing must be emitted since no other file defines --spacing-* */
+@theme {
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+
+  /* ── Border Radius ── */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ── Font Families ── */
+  --font-display: "Cormorant Garamond", "Noto Sans Arabic", Georgia, serif;
+  --font-body: "DM Sans", "Noto Sans Arabic", system-ui, sans-serif;
+  --font-mono: "Roboto Mono", "Courier New", monospace;
+  --font-brand-ar: "Changa", system-ui, sans-serif;
+
+  /* ── Font Sizes ── */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.75rem;
+  --text-4xl: 3.5rem;
+}
+
+/* Colors reference existing theme.css vars — use inline to avoid duplication */
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-primary-light: var(--color-primary-light);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-accent: var(--color-accent);
+  --color-accent-light: var(--color-accent-light);
+  --color-accent-muted: var(--color-accent-muted);
+  --color-bg: var(--color-bg);
+  --color-bg-card: var(--color-bg-card);
+  --color-bg-card-alt: var(--color-bg-card-alt);
+  --color-bg-muted: var(--color-bg-muted);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-inverse: var(--color-text-inverse);
+  --color-text-accent: var(--color-text-accent);
+  --color-border: var(--color-border);
+  --color-border-light: var(--color-border-light);
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+}
+
+/* ── Dark mode: class strategy matching @dazl/color-scheme ── */
+@custom-variant dark (&:where(.dark-theme, .dark-theme *));
+
+/* ── RTL variant ── */
+@custom-variant rtl (&:where([dir="rtl"], [dir="rtl"] *));
+
+html, body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Hide an element visually without hiding it from screen readers. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ── Print: hide nav + footer globally ───────────────── */
+/* ── Global Micro-interactions ───────────────────────── */
+button {
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.02);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+@media print {
+  header,
+  footer {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+  }
+}
