@@ -49,3 +49,12 @@
 [submodule "build-it/2-OptiGami"]
 	path = build-it/2-OptiGami
 	url = https://github.com/Vixen-77/RAG-implementation/
+[submodule "it-blackout/WebSockets"]
+	path = it-blackout/WebSockets
+	url = https://github.com/maya-ots/WebSockets
+[submodule "it-blackout/Neural-Network"]
+	path = it-blackout/Neural-Network
+	url = https://github.com/meriemosayoud-prog/Neural-Network-Workshop
+[submodule "it-blackout/Computer-Vision"]
+	path = it-blackout/Computer-Vision
+	url = https://github.com/khadidja90/Blackout-3
