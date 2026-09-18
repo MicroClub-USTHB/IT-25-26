@@ -58,3 +58,9 @@
 [submodule "it-blackout/Computer-Vision"]
 	path = it-blackout/Computer-Vision
 	url = https://github.com/khadidja90/Blackout-3
+[submodule "it-blackout/State-Management"]
+	path = it-blackout/State-Management
+	url = https://github.com/malek-bz09/state-management
+[submodule "it-blackout/gRPC"]
+	path = it-blackout/gRPC
+	url = https://github.com/obyacine/gRPC-workshop
