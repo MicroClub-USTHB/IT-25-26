@@ -1,0 +1,43 @@
+.root {
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6);
+  min-height: 56px;
+  background: var(--color-bg-card);
+  border: 2px dashed var(--color-primary);
+  border-radius: var(--radius-xl);
+  color: var(--color-primary);
+  font-size: var(--text-md);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover {
+  background: var(--color-highlight);
+}
+
+.btnLoading {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.btnSuccess {
+  border-color: var(--color-success);
+  color: var(--color-success);
+  border-style: solid;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

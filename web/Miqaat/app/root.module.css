@@ -1,0 +1,12 @@
+.body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--family-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageContent {
+  flex: 1;
+}

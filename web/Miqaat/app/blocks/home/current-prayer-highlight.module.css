@@ -1,0 +1,110 @@
+.root {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-6);
+  box-shadow: var(--shadow-md), var(--shadow-accent-glow);
+  border: 2px solid var(--color-accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.header {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent-muted);
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-full);
+  color: #5d4a1f;
+  /* لون غامق يتناسب مع الذهبي لزيادة التباين */
+  border: 1px solid rgba(var(--color-accent), 0.3);
+  margin-bottom: var(--space-2);
+}
+
+.headerLabel {
+  font-size: var(--text-base);
+  letter-spacing: 0.05em;
+  font-weight: 900;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
+  border-radius: var(--radius-md);
+  color: #1a2b3c;
+  flex-shrink: 0;
+}
+
+.name {
+  font-family: var(--family-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.timeLabel {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.time {
+  font-family: var(--family-mono);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--space-3);
+  line-height: 1;
+  direction: rtl;
+}
+
+.periodPart {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+:global([lang="ar"]) .periodPart {
+  font-family: var(--family-brand-ar);
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+@media (max-width: 480px) {
+  .root {
+    padding: var(--space-5) var(--space-4);
+  }
+
+  .name {
+    font-size: var(--text-xl);
+  }
+}

@@ -1,0 +1,174 @@
+.root {
+  background-color: #0b1120; /* very dark navy */
+  color: #f8fafc;
+}
+
+.brand {
+  text-decoration: none;
+  color: #f8fafc;
+}
+
+.brandText {
+  font-family: var(--family-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+:global([lang="ar"]) .brandText {
+  font-family: var(--family-brand-ar);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.logoImg {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background: white;
+  padding: 2px;
+}
+
+.slogan {
+  font-size: var(--text-sm);
+  color: #94a3b8;
+  opacity: 0.8;
+  max-width: 500px;
+  text-align: center;
+  margin: 0;
+}
+
+.gridTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.gridLink {
+  display: flex;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  color: #94a3b8;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.gridLink:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #f8fafc;
+}
+
+.gridLink svg {
+  color: #94a3b8;
+  transition: color 0.3s;
+}
+
+.gridLink:hover svg {
+  color: #f8fafc;
+}
+
+.linkText {
+  flex: 1;
+  margin: 0 var(--space-4);
+  font-weight: 500;
+  font-size: var(--text-lg);
+}
+
+.chevron {
+  opacity: 0.5;
+}
+
+.contactDesc {
+  color: #94a3b8;
+  font-size: var(--text-md);
+  margin: 0;
+  text-align: center;
+}
+
+.contactButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-4);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--text-xs);
+  transition: all 0.3s;
+}
+
+.contactButton:hover {
+  background: rgba(56, 189, 248, 0.1);
+  border-color: #38bdf8;
+  transform: translateY(-2px);
+}
+
+.boxIcon {
+  width: 2rem;
+  height: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.boxIcon svg {
+  color: #94a3b8;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.boxIcon:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.boxIcon:hover svg {
+  color: #f8fafc;
+  transform: scale(1.1);
+}
+
+.copyLine1 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin: 0;
+  color: #f8fafc;
+  opacity: 0.8;
+  white-space: nowrap;
+}
+
+.copyLine2 {
+  font-size: var(--text-sm);
+  margin: var(--space-1) 0 0;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.scrollTop {
+  width: 2.25rem;
+  height: 2.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #38bdf8;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.scrollTop:hover {
+  background: rgba(56, 189, 248, 0.1);
+  transform: translateY(-4px);
+}
+
+@media (max-width: 850px) {
+  .brandText {
+    font-size: 2.5rem;
+  }
+}

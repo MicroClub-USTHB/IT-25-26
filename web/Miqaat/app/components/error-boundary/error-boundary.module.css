@@ -1,0 +1,59 @@
+.errorBoundary {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.errorContainer {
+  text-align: center;
+  max-width: 70%;
+  width: 100%;
+  padding: 2.5rem;
+}
+
+.errorTitle {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  color: #333;
+}
+
+.errorStackWrapper {
+  position: relative;
+}
+
+.copyButton {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #e5e5e5;
+  border: 1px solid #d4d4d4;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.copyButton:hover {
+  background: #d4d4d4;
+}
+
+.copyButton:active {
+  background: #c4c4c4;
+}
+
+.errorStack {
+  margin-top: 1rem;
+  text-align: start;
+  overflow: auto;
+  font-size: 0.875rem;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-radius: 0.375rem;
+  border: 1px solid #e5e5e5;
+  max-height: 20rem;
+}

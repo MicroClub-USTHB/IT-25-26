@@ -1,0 +1,183 @@
+.root {
+  width: 100%;
+}
+
+.tableWrapper {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-lg);
+  overflow-x: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tableWrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+  font-size: var(--text-base);
+  min-width: max-content;
+}
+
+.headerRow {
+  background: var(--color-primary);
+}
+
+.th {
+  padding: var(--space-4) var(--space-3);
+  text-align: center;
+  font-weight: 700;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-inverse);
+  white-space: nowrap;
+}
+
+.th:first-child {
+  width: 200px; /* Slightly more space for the full date */
+}
+
+.row {
+  border-bottom: 1px solid var(--color-border-light);
+  transition: background 0.15s;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row:hover {
+  background: var(--color-highlight);
+}
+
+.rowToday {
+  background: var(--color-highlight);
+  font-weight: 600;
+}
+
+.rowToday:hover {
+  background: var(--color-highlight);
+}
+
+.td {
+  padding: var(--space-4) var(--space-3);
+  text-align: center;
+  color: var(--color-text);
+  font-family: var(--family-mono);
+  white-space: nowrap;
+  font-size: var(--text-base);
+}
+
+.dayCell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.dayInfo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  gap: 2px;
+}
+
+.dayName {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: var(--text-base);
+}
+
+.dateText {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.todayBadge {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 480px) {
+  .th,
+  .td {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-xs);
+  }
+}
+
+/* ── Print Styles ────────────────────────────────────── */
+@media print {
+  .root {
+    width: 100%;
+  }
+
+  .tableWrapper {
+    border: 1px solid #ccc;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .table {
+    min-width: 0;
+    font-size: 10pt;
+  }
+
+  .headerRow {
+    background: #1a5276 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .th {
+    color: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    padding: 4pt 6pt;
+  }
+
+  .row {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .row:hover {
+    background: transparent;
+  }
+
+  .rowToday {
+    background: #f0f4f8 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .td {
+    padding: 4pt 6pt;
+    color: #000;
+  }
+
+  .dayCell {
+    color: #1a5276;
+  }
+
+  .todayBadge {
+    background: #c9a84c;
+    color: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "project",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc"
+  },
+  "dependencies": {
+    "@dazl/color-scheme": "^1.2.1",
+
+    "@react-router/node": "^7.14.1",
+    "@react-router/serve": "^7.14.1",
+    "classnames": "^2.5.1",
+    "isbot": "^5.1.38",
+    "lucide-react": "^1.8.0",
+
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+
+    "react-router": "^7.14.1"
+  },
+  "devDependencies": {
+    "@dazl-lib/radix-ui": "^0.1.0",
+    "@dazl/component-gallery": "^2.0.1",
+    "@dazl/dev": "^1.4.0",
+    "@react-router/dev": "^7.14.1",
+    "@tailwindcss/vite": "^4.2.4",
+    "@types/node": "24",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "prettier": "^3.8.2",
+    "tailwindcss": "^4.2.4",
+    "typescript": "~6.0.2",
+    "vite": "^7.3.2",
+    "vite-tsconfig-paths": "^6.1.1"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "endOfLine": "auto"
+  },
+  "overrides": {
+    "vite-tsconfig-paths": {
+      "typescript": "~6.0.2"
+    },
+    "@radix-ui/react-primitive": "2.1.3"
+  }
+}
