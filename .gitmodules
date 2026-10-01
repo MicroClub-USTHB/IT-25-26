@@ -64,3 +64,12 @@
 [submodule "it-blackout/gRPC"]
 	path = it-blackout/gRPC
 	url = https://github.com/obyacine/gRPC-workshop
+[submodule "mobile/The-Dart-Language-1st-session"]
+	path = mobile/The-Dart-Language-1st-session
+	url = https://github.com/01amine/Dart-Workshop.git
+[submodule "Flutter-Foundations-"]
+	path = Flutter-Foundations-
+	url = https://github.com/01amine/flutter-workshop.git
+[submodule "mobile/Flutter-Foundations-UI-Logic"]
+	path = mobile/Flutter-Foundations-UI-Logic
+	url = https://github.com/01amine/flutter-workshop.git
