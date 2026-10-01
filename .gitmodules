@@ -1,75 +1,72 @@
 [submodule "devops"]
 	path = devops
 	url = git@github.com:MoussaabBadla/devops-bootcamp.git
-[submodule "build-it/3-Pioneers"]
-	path = build-it/3-Pioneers
+[submodule "events/build-it/3-Pioneers"]
+	path = events/build-it/3-Pioneers
 	url = https://github.com/Ziouche-maroua/pioneer-pulse/
-[submodule "build-it/404Finders"]
-	path = build-it/404Finders
+[submodule "events/build-it/404Finders"]
+	path = events/build-it/404Finders
 	url = https://github.com/SeM2x/fine-tuning
-[submodule "build-it/Apex"]
-	path = build-it/Apex
+[submodule "events/build-it/Apex"]
+	path = events/build-it/Apex
 	url = https://github.com/ilyes-rhdi/mini-Notion-gql
-[submodule "build-it/ArchiTects"]
-	path = build-it/ArchiTects
+[submodule "events/build-it/ArchiTects"]
+	path = events/build-it/ArchiTects
 	url = https://github.com/moncefy/BUILD-IT-API-FETCHING
-[submodule "build-it/BobsTheBuilders"]
-	path = build-it/BobsTheBuilders
+[submodule "events/build-it/BobsTheBuilders"]
+	path = events/build-it/BobsTheBuilders
 	url = https://github.com/HaniOdh/BuildIT
-[submodule "build-it/BrainWaves"]
-	path = build-it/BrainWaves
+[submodule "events/build-it/BrainWaves"]
+	path = events/build-it/BrainWaves
 	url = https://github.com/adelmerad/Pagination
-[submodule "build-it/BugBusters"]
-	path = build-it/BugBusters
+[submodule "events/build-it/BugBusters"]
+	path = events/build-it/BugBusters
 	url = https://github.com/oussamatght/ChoufPrice-DZ-Platform-backend
-[submodule "build-it/Build_X"]
-	path = build-it/Build_X
+[submodule "events/build-it/Build_X"]
+	path = events/build-it/Build_X
 	url = https://github.com/NesRina03/cauldron
-[submodule "build-it/Builders"]
-	path = build-it/Builders
+[submodule "events/build-it/Builders"]
+	path = events/build-it/Builders
 	url = https://github.com/malak-bou/Web_RTC_Project.git
-[submodule "build-it/DataDome"]
-	path = build-it/DataDome
+[submodule "events/build-it/DataDome"]
+	path = events/build-it/DataDome
 	url = https://github.com/glorynino/SmartMeetOS
-[submodule "build-it/ForgeIT"]
-	path = build-it/ForgeIT
+[submodule "events/build-it/ForgeIT"]
+	path = events/build-it/ForgeIT
 	url = https://github.com/Lyna-li/Hotel-Management-System.git
-[submodule "build-it/STARKS"]
-	path = build-it/STARKS
+[submodule "events/build-it/STARKS"]
+	path = events/build-it/STARKS
 	url = https://github.com/SamyBakiri/Email-Sender-Backgroung-jobs-Queues-Batch-proccessing
-[submodule "build-it/asten"]
-	path = build-it/asten
+[submodule "events/build-it/asten"]
+	path = events/build-it/asten
 	url = https://github.com/HADIL19/student-opportunities.git
-[submodule "build-it/gitIgnore"]
-	path = build-it/gitIgnore
+[submodule "events/build-it/gitIgnore"]
+	path = events/build-it/gitIgnore
 	url = https://github.com/WRH-05/BUILDIT-REVERSE-RPOXY
-[submodule "build-it/1-so99or"]
-	path = build-it/1-so99or
+[submodule "events/build-it/1-so99or"]
+	path = events/build-it/1-so99or
 	url = https://github.com/wailman24/Caching
-[submodule "build-it/2-OptiGami"]
-	path = build-it/2-OptiGami
+[submodule "events/build-it/2-OptiGami"]
+	path = events/build-it/2-OptiGami
 	url = https://github.com/Vixen-77/RAG-implementation/
-[submodule "it-blackout/WebSockets"]
-	path = it-blackout/WebSockets
+[submodule "events/it-blackout/WebSockets"]
+	path = events/it-blackout/WebSockets
 	url = https://github.com/maya-ots/WebSockets
-[submodule "it-blackout/Neural-Network"]
-	path = it-blackout/Neural-Network
+[submodule "events/it-blackout/Neural-Network"]
+	path = events/it-blackout/Neural-Network
 	url = https://github.com/meriemosayoud-prog/Neural-Network-Workshop
-[submodule "it-blackout/Computer-Vision"]
-	path = it-blackout/Computer-Vision
+[submodule "events/it-blackout/Computer-Vision"]
+	path = events/it-blackout/Computer-Vision
 	url = https://github.com/khadidja90/Blackout-3
-[submodule "it-blackout/State-Management"]
-	path = it-blackout/State-Management
+[submodule "events/it-blackout/State-Management"]
+	path = events/it-blackout/State-Management
 	url = https://github.com/malek-bz09/state-management
-[submodule "it-blackout/gRPC"]
-	path = it-blackout/gRPC
+[submodule "events/it-blackout/gRPC"]
+	path = events/it-blackout/gRPC
 	url = https://github.com/obyacine/gRPC-workshop
 [submodule "mobile/The-Dart-Language-1st-session"]
 	path = mobile/The-Dart-Language-1st-session
 	url = https://github.com/01amine/Dart-Workshop.git
-[submodule "Flutter-Foundations-"]
-	path = Flutter-Foundations-
-	url = https://github.com/01amine/flutter-workshop.git
 [submodule "mobile/Flutter-Foundations-UI-Logic"]
 	path = mobile/Flutter-Foundations-UI-Logic
 	url = https://github.com/01amine/flutter-workshop.git
